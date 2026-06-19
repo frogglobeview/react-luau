@@ -30,12 +30,12 @@ while argNum < len(sys.argv):
 			parameters['directory'] = value
 		else:
 			print(f"Error: Argument for {arg} is missing, please specify an output directory")
-			exit(1)
+			sys.exit(1)
 
 		argNum += 2
 	elif arg[0:1] == "-":
 		print(f"Error: Unsupported flag {arg}")
-		exit(1)
+		sys.exit(1)
 	else:
 		CSVs.append(arg)
 		argNum += 1
